@@ -42,7 +42,6 @@ void setup() {
 
         if ( lineCount >= 16 ) {
             lineCount     = 0;
-            // asciiDump[16] = 0;
             Serial.print(textString);
             Serial.println(asciiDump);
         }
@@ -63,7 +62,7 @@ byte I2CEEPROM_Read(unsigned long address ) {
     Wire.write((int)lowByte(address) );
     Wire.endTransmission();
     Wire.requestFrom(EEPROM_ID,(byte)1);
-    
+
     // while(Wire.available() == 0) // wait for data;
     data = Wire.read();
     return data;
