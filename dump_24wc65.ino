@@ -1,6 +1,6 @@
 /*
 * I2C EEPROM sketch
-* this version for 24LC128
+* this version for 24WC65
 */
 
 #include <Wire.h>
